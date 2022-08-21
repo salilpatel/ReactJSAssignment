@@ -12,6 +12,20 @@ function App() {
 
 export default App;*/
 
+/*
+import CartContainer from "./Project/Shopping Cart/CartContainer";
+
+function AppProject(){
+    return(
+        <>
+        <CartContainer></CartContainer>
+        </>
+    )
+}
+
+export default AppProject;
+*/
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ImageGalleryElephant from './Problem3/ImageGalleryElephant'
 import Preview from './Problem3/Preview'
