@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import './ImageGalleryElephant.css';
 
 const Preview = () => {
-  console.log("inside props", props)
   const [image, setImage] = useState([])
   const { user } = useParams()
 
