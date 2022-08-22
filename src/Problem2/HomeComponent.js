@@ -1,30 +1,33 @@
 /* HomeComponent */
-import { BrowserRouter,Routes,Route,Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import AddContainer from "./AddContainer"
 import RemoveContainer from "./RemoveContainer";
 import "bootstrap/dist/css/bootstrap.css";
+import "./NavBar.css"
 
 const CartComponent = (props) => {
-    console.log(props)
-    return(
-        <>
-        <BrowserRouter>
-        <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                  <nav className="navbar navbar-dark bg-dark">
-                        <h1><Link to="/">Shopping Cart</Link></h1>
-                        <h1 style={{textAlign:'right'}}><Link to="/cart">Cart {props.count}</Link></h1>
-                  </nav>
-              </div>
-            </div>
-        </div>
+  return (
+    <div className="container">
+      <BrowserRouter>
+        <nav id="navbar" className="navbar navbar-expand-lg">
+          <Link to='/'><h2>Shopping Cart</h2></Link>
+          <div className='navBag'>
+            <Link to='/cart'><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+              <span className='navQuantity'>
+                <span>{props.count}</span>
+              </span>
+            </Link>
+          </div>
+        </nav>
         <Routes>
-            <Route index path="/" element={<AddContainer/>}></Route>
-            <Route path="cart" element={<RemoveContainer/>}></Route>
+          <Route index path='/' element={<AddContainer />}></Route>
+          <Route path='/cart' element={<RemoveContainer />} ></Route>
         </Routes>
-        </BrowserRouter>
-        </>
-    )
+      </BrowserRouter>
+    </div>
+  );
 }
-export default CartComponent
+
+export default CartComponent;
