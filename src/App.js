@@ -13,12 +13,13 @@ function App() {
 export default App;*/
 
 /*
-import CartContainer from "./Project/Shopping Cart/CartContainer";
+import React from "react";
+import NavBar from "./Problem2/NavBar";
 
 function AppProject(){
     return(
         <>
-        <CartContainer></CartContainer>
+        <NavBar></NavBar>
         </>
     )
 }
