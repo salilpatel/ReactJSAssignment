@@ -14,7 +14,7 @@ export default App;*/
 
 /*
 import React from "react";
-import NavBar from "./Problem2/NavBar";
+import NavBar from "./Problem2New/NavBar";
 
 function AppProject(){
     return(
